@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="VapeToolKitCalculatorDK, VPTDK, VPT, KalkulatorVape, VapeKalkulator, Kalkulatorlq, Kalkulator epapieros, Kalkulatordoepapierosów" />
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="skrypt.js"></script>
+	<title>VapeToolKitCalculatorDK</title>
+</head>
+
+<body>
+	
+	<header>
+		<a href="index.html"><img id="baner" src="baner.png" alt="baner" width="30%"></a>
+	</header>
+	
+	<div id="menu">
+		<div id="wybory">
+
+			<ul>
+				<li id="liaromat" onmouseover="showMeAromat()" onmouseout="hideAromat()" onclick="showMeAromatSide()">
+					<a>AROMAT</a>
+				</li>
+				
+				<li onmouseover="showMeMg()" onmouseleave="hideMg()" onclick="showMeMgSide()">
+					<a>0 MG.</a>
+				</li >
+				
+				<li onmouseover="showMeShot()" onmouseleave="hideShot()" onclick="showMeShotSide()">
+					<a>SHOT</a>
+				</li>
+				
+				<li onmouseover="showMeMieszanie()" onmouseleave="hideMieszanie()" onclick="showMeMieszanieSide()">
+					<a>MIESZANIE</a>
+				</li></br>
+				<div id="liphoto">
+				<li id="li_aromatphoto">
+					<img id="AROMATPHOTO" src="aromat.png" alt="AROMAT">
+				</li>
+				
+				<li id="li_mgphoto">
+					<img id="MGPHOTO" src="0mg.png" alt="0MG">
+				</li>
+				
+				<li id="li_shotphoto">
+					<img id="SHOTPHOTO" src="shot.png" alt="SHOT">
+				</li>
+				
+				<li id="li_mieszaniephoto">
+					<img id="MIESZANIEPHOTO" src="gotowe.png" alt="MIESZANIE">
+				</li>
+				</div>
+			</ul>	
+			
+		</div>			
+	</div>
+	
+	<div id="przyciemnienie_1">
+	</div>	
+
+	<div id="okienko_1">
+	<button id="okienko_button_1" onclick="hideOkienko_1()">X</button></br></br>
+	<a id="tekst_okienko_1"></a>
+	</div>
+
+	<div id="okienko_2">
+	<button id="okienko_button_2" onclick="hideOkienko_2()">X</button></br></br>
+	<a id="tekst_okienko_2"></a>
+	</div>
+
+	<div id="przyciemnienie_2">
+	</div>
+
+	<div id="okienko_3">
+	<button id="okienko_button_3" onclick="hideOkienko_3()">X</button></br></br>
+	<a id="tekst_okienko_3"></a>
+	</div>
+
+	<div id="przyciemnienie_3">
+	</div>
+
+	<div id="okienko_4">
+	<button id="okienko_button_4" onclick="hideOkienko_4()">X</button></br></br>
+	<a id="tekst_okienko_4"></a>		
+	</div>
+
+	<div id="przyciemnienie_4">
+	</div>
+
+	<div id="slider">
+	<div id="aromat">
+	
+		<div id="lewy">
+		
+			<table>
+				<tbody>
+				<tr>
+					<td><a>Ile kropel aromatu używasz na 1ml płynu?</a></td>
+				<td><input type="number" id="pole1" /></br></td>
+				</tr>
+				<tr>
+					<td><a>Ile posiadasz bazy do zmieszania w ml?</a></td>
+				<td><input type="number" id="pole2"/></td>
+				</tr>
+				<tr>
+					<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="aromat()"/></td>
+				</tr>
+				</tbody>
+			</table>
+		
+		</div>
+		
+		<div id="prawy" >
+			<table>
+				<tbody>
+				<tr>
+					<td colspan="2" style="text-align:center" id="zaokraglone"><a>Zaokrąglone dane to:</a></td>
+				</tr>
+				<tr>
+					<td><b id="koniec2"></b></td>
+					<td> <a>ml. aromatu,</a></br></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:center" id="dokladne"><a>Dokładne dane to:</a></td>
+				</tr>
+				<tr>
+					<td><b id="koniec"></b></td>
+					<td><a> ml. aromatu</a></td>
+				</tr>
+				<tr id="bottom">
+					<td><b id="koniec3"></b></td>
+					<td><a> liczba kropel</a></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>	
+	
+	<div id="bazamg">
+		<div id="lewy">
+			<table>
+				<tbody>
+					<tr>
+						<td><a>Podaj ilość shota w ml. :</a></td>
+						<td><input type="number" id="pole1_bazamg" /></td>
+					</tr>
+					<tr>
+						<td><a>Podaj moc shota w mg. :</a></td>
+						<td><input type="number" id="pole2_bazamg"/></td>
+					</tr>
+					<tr>
+						<td><a>Jaką moc chcesz uzyskać? :</a></td>
+						<td><input type="number" id="pole3_bazamg" /></td>
+					</tr>
+					<tr>
+						<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="mg()" /></td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+		
+		<div id="prawy" >
+			<table>
+				<tbody>
+					<tr>
+						<td colspan="2" style="text-align:center" id="zaokraglone"><a>Zaokrąglone dane to:</a></td>
+					</tr>
+					<tr>
+						<td><a id="wynik_okolo_bazamg"></a></td>
+						<td><a> ml. bazy 0mg.</a></br></td>
+					</tr>
+					<tr>
+						<td><a id="il_okolo_bazamg"></a></td>
+						<td><a> ml. gotowego płynu</a></td>
+					</tr>
+					<tr>
+						<td><a id="po_moc_bazamg"></a></td>
+						<td><a> mg. mocy gotowego płynu</a></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center" id="dokladne"><a>Dokładne dane to:</a></td>
+					</tr>
+					<tr>
+						<td><a id="wynik_bazamg"></a></td>
+						<td ><a> ml. potrzebnej bazy 0mg.</a></td>
+					</tr>
+					<tr>
+						<td><a id="dzialanie2_bazamg"></a></td>
+						<td ><a> ml. ilość gotowego płynu</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+	
+	<div id="shot">
+		<div id="lewy">
+		<table>
+			<tbody>
+				<tr>
+					<td><a>Podaj ile masz bazy 0 mg.: </a></td>
+					<td><input type="number" id="pole1_shot" /></td>
+				</tr>
+				<tr>
+					<td><a>Podaj moc shota w mg.: </a></td>
+					<td><input type="number" id="pole2_shot"/></td>
+				</tr>
+				<tr>
+					<td><a>Podaj jaką moc chcesz uzyskać w mg.: </a></td>
+					<td><input type="number" id="pole3_shot"/></td>
+				</tr>
+				<tr>
+					<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="baza()" /></td>
+				</tr>
+			</tbody>
+		</table>
+			
+		</div>
+		<div id="prawy" >
+			<table>
+				<tbody>
+				<tr>
+					<td style="text-align:center" colspan="2" id="zaokraglone">Zaokrąglone dane:</td>
+				</tr>
+				<tr>
+					<td><a id="okobl3_shot"></a></td>
+					<td><a> ml. potrzbnego shota</a></br></td>
+				</tr>
+				<tr>
+					<td><a id="moc_shota_shot"></a></td>
+					<td><a> moc potrzbnego shota</a></td>
+				</tr>
+				<tr>
+					<td><a id="okwynik_shot"></a></td>
+					<td><a> ml. gotowego płynu</a></td>
+				</tr>
+				<tr>
+					<td><a id="po_moc_shot"></td>
+					<td><a> mg. mocy gotowego płynu</a></td>
+				</tr>
+				<tr>
+					<td style="text-align:center" colspan="2" id="dokladne"><a>Dokładne dane to:</a></td>
+				</tr>
+				<tr>
+					<td><a id="obl3_shot"></a></td>
+				<td ><a> ml. potrzebnego shota</a></td>
+				</tr>
+				<tr>
+					<td><a id="moc_shota1_shot"></a></td>
+					<td ><a> mg. mocy shota </a></td>
+				</tr>
+				<tr>
+					<td><a id="wynik_shot"></a></td>
+					<td ><a> ml. gotowego płynu </a></td>
+				</tr>
+				</tbody>
+			</table>	
+		</div>
+		
+	</div>
+	
+	<div id="mieszanie">
+	
+		<div id="lewy">
+			<table>
+				<tbody>
+					<tr>
+						<td><a>Podaj ilość bazy 0 mg. w ml. do zmieszania: </a></td>
+						<td><input type="number" id="pole1_mieszanie" /></td>
+					</tr>
+					<tr>
+						<td><a>Podaj ilość shota w ml.: </a></td>
+						<td><input type="number" id="pole2_mieszanie"/></td>
+					</tr>
+					<tr>
+						<td><a>Podaj moc shota w mg.: </a></td>
+						<td><input type="number" id="pole3_mieszanie" /></td>
+					</tr>
+					<tr>
+						<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="gotowe()" /></td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+	
+		<div id="prawy" >
+			<table>
+				<tbody>
+					<tr>
+						<td style="text-align:center" colspan="3" id="zaokraglone">Zaokrąglone dane:</td>
+					</tr>
+					<tr>
+						<td><a id="il_okolo_mieszanie"></a></td>
+						<td><a> ml. gotowego płynu.</a></td>
+					</tr>
+					<tr>
+						<td><a id="wynik_okolo_mieszanie"></a></td>
+						<td><a>mg. mocy</br></td>
+					</tr>
+					<tr>
+						<td style="text-align:center" colspan="2" id="dokladne"><a>Dokładne dane to:</a></td>
+					</tr>
+					<tr>
+						<td><a id="il_lq_po_zmiesz_mieszanie"></a></td>
+						<td><a> ml gotowego płynu</a></td>
+					</tr>
+					<tr>
+						<td><a id="wynik_mieszanie"></a></td>
+						<td ><a> mg. mocy gotowego płynu</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	</div>
+	
+	<footer>
+		<a id="tworca">©Strona stwrozna przez Dawida. K</a>
+		<a id="komunikat">Jeżeli na stronie wyświetlają się błędy usuń historię(a dokładnie pliki pamięci podręcznej).</a>
+	</footer>
+
+</body>
+</html>

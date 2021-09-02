@@ -1,0 +1,733 @@
+* {padding:0;
+	margin:0;
+	box-sizing: border-box;
+	font-family: Monaco;
+	color:white;
+	z-index: 0;
+	}
+	
+header {
+		background-color: #14004d;
+		text-align: center;
+		width: 100%;
+		float: right;
+		
+		}
+		
+body {background-color: #000000;}
+
+header img{
+			width:30%;
+			animation: pojawienie_aromatu_width 1000ms;
+		}
+
+#menu{
+	color: white;
+	width: 100%;
+	height: 10%;
+	animation: pojawienie_aromatu_width 1000ms;
+}
+
+ul li {
+	float: left;
+}
+
+#menu #wybory ul li{
+	list-style: none;
+	display:inline;
+	width:25%;
+	background-color: #07001c;
+	border-left:1px solid #c0c0c0;
+	border-right:1px solid #c0c0c0;
+	border-top:2px solid #c0c0c0;
+	border-bottom:2px solid #c0c0c0;
+	text-align:center;
+	font-size:200%;
+	cursor: pointer;
+}
+
+
+
+#menu #wybory ul li:hover{
+	animation: reveal 2000ms,
+    glow 3500ms linear infinite 1000ms;
+	border-left:1px solid #fff;
+	border-right:1x solid #fff;
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+	background-color: #170158;
+}
+
+#menu #wybory ul li a{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#menu #wybory ul li:hover a{
+	color: rgba(255, 255, 255, 1);
+}
+
+#menu #wybory #liphoto li{
+border-color: rgb(0,0,0,0);
+}
+
+#AROMATPHOTO{
+	display:none;
+	width: 25%;
+	margin-right: auto;
+	position:absolute;
+	z-index: 2;
+}
+
+
+#MGPHOTO{
+	display:none;
+	width: 25%;
+	margin-left: auto;
+	position:absolute;
+	z-index: 2;
+}
+
+#SHOTPHOTO{
+	display:none;
+	width: 25%;
+	margin-left: auto;
+	position:absolute;
+	z-index: 2;
+}
+
+#MIESZANIEPHOTO{
+	display:none;
+	width: 24.9%;
+	margin-left: auto;
+	position:absolute;
+	z-index: 2;
+}
+
+/*Okienko css*/
+
+#przyciemnienie_1, #przyciemnienie_2, #przyciemnienie_3, #przyciemnienie_4{
+	display: none;
+	position: absolute;
+	width:100%;
+	height:100%;
+	top: 0;
+	z-index:3;
+	background-color: #000;
+	opacity: 90%;
+}
+
+#okienko_1, #okienko_2, #okienko_3, #okienko_4 {
+	display:none;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	width:40%;
+	height:auto;
+	left:30%;
+	border: 2px solid rgba(0, 161, 201, 0.9);
+	top: 25%;
+	z-index:4;
+	background-color: #000;
+	box-shadow: 	0 0 1px rgba(0, 161, 201, 0.4), 
+					0 0 2px rgba(0, 161, 201, 0.4),
+					0 0 4px rgba(0, 161, 201, 0.4),
+					0 0 8px rgba(0, 161, 201, 0.4),
+					0 0 16px rgba(0, 161, 201, 0.4),
+					0 0 32px rgba(0, 161, 201, 0.4),
+					0 0 64px rgba(0, 161, 201, 0.4);
+	text-align: center;
+}
+
+#okienko_1 a, #okienko_2 a, #okienko_3 a, #okienko_4 a{
+		float:left;
+		font-size:200%;
+}
+
+#okienko_1 #okienko_button_1, #okienko_2 #okienko_button_2, #okienko_3 #okienko_button_3, #okienko_4 #okienko_button_4{
+	width:2em;
+	height:2em;
+	float:right;
+	border-radius:50%;
+	background-color: rgb(73, 73, 73);
+	font-size:1em;
+	font-family:Arial;
+	cursor: pointer;
+	color: #fff;	
+	border: solid #fff;
+	border-width: 0.1em;
+}
+
+/*Aromat css*/
+
+#slider #aromat {
+display:none;
+position: relative;
+z-index: -2;
+width:100%;
+}
+	
+#slider #aromat table{
+		border: none;
+		font-size:180%;
+		border-spacing: 0mm 0mm;
+		border-radius: 15px;
+}
+
+#slider #aromat td{border: 2mm solid #14004d;
+	background-color:#30156E;
+	border-radius: 15px;
+}
+
+#slider #aromat #button{
+	padding: 20px 20px;
+  font-size: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #30156E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #632CDE;
+  width: 100%;
+}
+
+#slider #aromat #button:hover {background-color: #4C22AB}
+
+#slider #aromat #button:active {
+  background-color: #632CDE;
+  box-shadow: 0 5px #632CDE;
+  transform: translateY(4px);
+}
+
+#slider #aromat #buttontable{
+	border: 0px;
+	background:none;
+	padding: 3% 1%;	
+}
+
+#slider #aromat input{
+	width: 100%;
+	padding: 8%;
+	box-sizing: border-box;
+	resize: vertical;
+	font-size:100%;
+	background-color:#30156E;
+	color: white;
+	border: 1px solid #30156E;
+}
+
+#slider #aromat #lewy	{
+	float:left;
+	color:white;
+	width: 50%;
+	background-color:#000000;
+	margin-top: 2%;
+}
+
+#slider #aromat #prawy	{
+	float:right;
+	color:white;
+	background-color:#000000;
+	margin-bottom:5mm;
+	margin-bottom:5mm;
+	text-align:right;
+	margin-top: 2%;	
+}
+
+#slider #aromat #zaokraglone{
+	background-color:#14004d;
+}
+
+#slider #aromat #dokladne{
+	background-color:#14004d;
+}
+
+/*0MG css*/
+
+#slider #bazamg {
+display:none;
+}
+	
+#slider #bazamg table{
+		border: none;
+		font-size:180%;
+		border-spacing: 0mm 0mm;
+		border-radius: 15px;
+}
+
+#slider #bazamg td{border: 2mm solid #14004d;
+	background-color:#30156E;
+	border-radius: 15px;
+}
+
+#slider #bazamg #button{
+	padding: 20px 20px;
+  font-size: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #30156E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #632CDE;
+  width: 100%;
+}
+
+#slider #bazamg #button:hover {background-color: #4C22AB}
+
+#slider #bazamg #button:active {
+  background-color: #632CDE;
+  box-shadow: 0 5px #632CDE;
+  transform: translateY(4px);
+}
+
+#slider #bazamg #buttontable{
+	border: 0px;
+	background:none;
+	padding: 3% 1%;	
+}
+
+#slider #bazamg input{
+	width: 100%;
+	padding: 8%;
+	box-sizing: border-box;
+	resize: vertical;
+	font-size:100%;
+	background-color:#30156E;
+	color: white;
+	border: 1px solid #30156E;
+
+}
+
+#slider #bazamg #lewy	{
+	float:left;
+	color:white;
+	width: 50%;
+	background-color:#000000;
+	margin-top: 2%
+}
+
+#slider #bazamg #prawy	{
+	float:right;
+	color:white;
+	background-color:#000000;
+	text-align:right;
+	margin-bottom:5mm;
+	margin-bottom:5mm;
+	text-align:right;
+	margin-top: 2%;
+	margin-top: 2%;
+}
+
+#slider #bazamg #zaokraglone{
+	background-color:#14004d;
+}
+
+#slider #bazamg #dokladne{
+	background-color:#14004d;
+}
+
+/*Shot css*/
+
+#slider #shot {
+display:none;
+}
+	
+#slider #shot table{
+		border: none;
+		font-size:180%;
+		border-spacing: 0mm 0mm;
+		border-radius: 15px;
+}
+
+#slider #shot td{border: 2mm solid #14004d;
+	background-color:#30156E;
+	border-radius: 15px;
+}
+
+#slider #shot #button{
+	padding: 20px 20px;
+  font-size: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #30156E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #632CDE;
+  width: 100%;
+}
+
+#slider #shot #button:hover {background-color: #4C22AB}
+
+#slider #shot #button:active {
+  background-color: #632CDE;
+  box-shadow: 0 5px #632CDE;
+  transform: translateY(4px);
+}
+
+#slider #shot #buttontable{
+	border: 0px;
+	background:none;
+	padding: 3% 1%;	
+}
+
+#slider #shot input{
+	width: 100%;
+	padding: 8%;
+	box-sizing: border-box;
+	resize: vertical;
+	font-size:100%;
+	background-color:#30156E;
+	color: white;
+	border: 1px solid #30156E;
+}
+
+#slider #shot #lewy	{
+	float:left;
+	color:white;
+	width: 50%;
+	background-color:#000000;
+	margin-top: 2%
+}
+
+#slider #shot #prawy	{
+	float:right;
+	color:white;
+	background-color:#000000;
+	text-align:right;
+	margin-bottom:5mm;
+	margin-bottom:5mm;
+	text-align:right;
+	margin-top: 2%;
+	margin-top: 2%
+}
+
+#slider #shot #zaokraglone{
+	background-color:#14004d;
+}
+
+#slider #shot #dokladne{
+	background-color:#14004d;
+}
+
+/*Mieszanie css*/
+
+#slider #mieszanie {
+display:none;
+}
+	
+#slider #mieszanie table{
+		border: none;
+		font-size:180%;
+		border-spacing: 0mm 0mm;
+		border-radius: 15px;
+}
+
+#slider #mieszanie td{border: 2mm solid #14004d;
+	background-color:#30156E;
+	border-radius: 15px;
+}
+
+#slider #mieszanie #button{
+	padding: 20px 20px;
+  font-size: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #30156E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #632CDE;
+  width: 100%;
+}
+
+#slider #mieszanie #button:hover {background-color: #4C22AB}
+
+#slider #mieszanie #button:active {
+  background-color: #632CDE;
+  box-shadow: 0 5px #632CDE;
+  transform: translateY(4px);
+}
+
+#slider #mieszanie #buttontable{
+	border: 0px;
+	background:none;
+	padding: 3% 1%;	
+}
+
+#slider #mieszanie input{
+	width: 100%;
+	padding: 8%;
+	box-sizing: border-box;
+	resize: vertical;
+	font-size:100%;
+	background-color:#30156E;
+	color: white;
+	border: 1px solid #30156E;
+
+}
+
+#slider #mieszanie #lewy	{
+	float:left;
+	color:white;
+	width: 50%;
+	background-color:#000000;
+	margin-top: 2%
+}
+
+#slider #mieszanie #prawy	{
+	float:right;
+	color:white;
+	background-color:#000000;
+	margin-bottom:5mm;
+	margin-bottom:5mm;
+	text-align:right;
+	margin-top: 2%;
+	margin-top: 2%
+}
+
+#slider #mieszanie #zaokraglone{
+	background-color:#14004d;
+}
+
+#slider #mieszanie #dokladne{
+	background-color:#14004d;
+}
+
+footer{ 
+		background-color: #14004d;
+		clear: both;
+		color: white;
+		text-align: right;
+		position:fixed;
+		left: 0;
+		bottom: 0;
+		width:100%;
+		margin-top:5mm;		
+		}
+
+footer #komunikat {
+	float:left;
+	color:rgb(172, 172, 172);
+}
+
+
+
+
+@media all and (orientation: portrait) {
+	
+		#menu #wybory #li_aromatphoto{
+			display: none;
+		}
+		
+		#menu #wybory #li_mgphoto{
+			display: none;
+		}
+
+		#menu #wybory #li_shotphoto{
+			display: none;
+		}
+
+		#menu #wybory #li_mieszaniephoto{
+			display: none;
+		}
+		
+		#menu #wybory ul li{
+		list-style: none;
+		display:block;
+		width:100%;
+		background-color: #07001c;
+		border-left:1px solid #c0c0c0;
+		border-right:1px solid #c0c0c0;
+		border-top:2px solid #c0c0c0;
+		border-bottom:2px solid #c0c0c0;
+		text-align:center;
+		font-size:200%;
+		cursor: pointer;
+		}
+		
+		footer{
+			font-size:120%;
+			text-align:center;
+			clear: both;
+			display: inline-block;
+		}
+		
+		footer #komunikat{
+			font-size:70%;
+			width:100%;
+			
+		}
+
+		footer #tworca{
+			width: 100%;
+		}
+
+		header img{
+			width:75%;
+		}
+		
+		#menu ul{
+			border: 0px;
+		}
+		
+		#slider #aromat #lewy	{
+		float:right;
+		width: 100%;
+		margin-top: 5%;
+		}
+		
+		#slider #aromat #prawy	{
+		position: relative;
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom: 10%;
+		}
+		
+		#slider #bazamg #lewy	{
+		width: 100%;
+		margin-top: 5%;
+		}
+		
+		#slider #bazamg #prawy	{
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom: 10%;
+		}
+		
+		#slider #shot #lewy	{
+		width: 100%;
+		margin-top: 5%;
+		}
+		
+		#slider #shot #prawy	{
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom: 10%;
+		}
+		
+		#slider #mieszanie #lewy	{
+		width: 100%;
+		margin-top: 5%;
+		
+		}
+		
+		#slider #mieszanie #prawy	{
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom: 10%;
+		}
+	
+		
+}	
+
+	#slider #aromat{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#slider #bazamg{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#slider #shot{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#slider #mieszanie{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}	
+
+@media all and (orientation: landscape) {
+	#slider #aromat{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#slider #bazamg{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#slider #shot{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#slider #mieszanie{
+		animation: pojawienie_aromatu 2000ms, pojawienie_aromatu_width 2000ms;
+	}
+	
+	#AROMATPHOTO{
+		animation: pojawienie 1000ms;
+	}
+	
+	#MGPHOTO{
+		animation: pojawienie 1000ms;
+	}
+	
+	#MIESZANIEPHOTO{
+		animation: pojawienie 1000ms;
+	}
+	
+	#SHOTPHOTO{
+		animation: pojawienie 1000ms;
+	}
+	
+	
+}
+
+@keyframes reveal {
+    80%{
+      letter-spacing: 4px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  
+ @keyframes glow {
+    40% {
+      text-shadow: 0 0 20px #fff;
+    }
+}
+
+@keyframes pojawienie{
+from {width:0%;}
+to {width:24.9%;}
+}
+
+@keyframes pojawienie_aromatu{
+from {opacity :0%;}
+to {opacity :100%;}
+}
+
+@keyframes pojawienie_aromatu_width{
+	from {margin-left :10%;}
+	to {margin-left :0;}
+}
+
+@keyframes znikanie{
+	from {width :24.9%;}
+	to {width :0%;}
+}
+
+@keyframes rotate {
+  from{
+	background-image:linear-gradient(to left, rgb(0, 0, 43), rgb(4, 0, 255));
+  }
+  to{
+	background-image:linear-gradient(to left,rgb(4, 0, 255), rgb(0, 0, 43) );
+  }
+}
+
+@keyframes przyciemnienie_animacja {
+	from {
+		opacity:80%;
+	}
+	to{
+		opacity:0%;
+	}	
+}
