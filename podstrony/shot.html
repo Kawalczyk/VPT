@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href="stylepodstron.css" rel="stylesheet" type="text/css">
+	<title>VPT_DK-shot</title>
+</head>
+
+<body>
+
+<header>
+		<a href="../index.html"><img id="baner" src="../baner.png" alt="baner"></a>
+</header>
+	<script language="JavaScript">
+		function baza()
+			{
+			var baza=document.getElementById("pole1").value;
+			if (baza<0){
+			alert("Podaj ilość bazy wiekszą od 0");
+			}
+			else
+			var moc_shota=document.getElementById("pole2").value;
+			if (moc_shota<0){
+			alert("Shot powinien zawierać moc wiekszą od 0");
+			}
+			else
+			var po_moc=document.getElementById("pole3").value;
+			if (po_moc>moc_shota){
+			alert("Z podanej wartosci shota nie otrzymasz takiej mocy końcowej płynu. (moc shota jest mniejsza niż pożądana moc)");
+			}
+			var obliczenie1=baza*po_moc*(-1);
+			var obliczenie2=Number(po_moc)-Number(moc_shota);
+			var obl3=obliczenie1/obliczenie2;
+			var wynik1=Number(obl3)+Number(baza);
+			var okobl3=Math.round(obl3);
+			var okwynik=Math.round(wynik1);
+			var moc_shota1=moc_shota;
+			var wynik=Math.round(wynik1 * 100) / 100;
+				
+			document.getElementById("obl3").innerHTML= obl3;
+			document.getElementById("okobl3").innerHTML= okobl3;
+			document.getElementById("moc_shota").innerHTML= moc_shota;
+			document.getElementById("wynik").innerHTML= wynik;
+			document.getElementById("okwynik").innerHTML= okwynik;
+			document.getElementById("po_moc").innerHTML= po_moc;
+			document.getElementById("moc_shota1").innerHTML= moc_shota1;
+			}
+	</script>
+	<section id="napis">
+	<a>Oblicz ile potrzebujesz aromatu</a>
+	</section>
+<section id="lewy">
+	<table>
+	<tbody>
+	<tr>
+	<td><a>Podaj ile masz bazy 0 mg.: </a></td>
+	<td><input type="number" id="pole1" /></td>
+	</tr>
+	<tr>
+	<td><a>Podaj moc shota w mg.: </a></td>
+	<td><input type="number" id="pole2"/></td>
+	</tr>
+	<tr>
+	<td><a>Podaj jaką moc chcesz uzyskać w mg.: </a></td>
+	<td><input type="number" id="pole3" /></td>
+	</tr>
+	<tr>
+	<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="baza()" /></td>
+	</tr>
+	</tbody>
+	</table>
+		
+</section>
+	<section id="prawy" >
+	<table>
+	<tbody>
+	<tr>
+	<td style="text-align:center" colspan="2" id="zaokraglone">Zaokrąglone dane:</td>
+	</tr>
+	<tr>
+	<td><a id="okobl3"></a></td>
+	<td><a> ml. potrzbnego shota</a></br></td>
+	</tr>
+	<tr>
+	<td><a id="moc_shota"></a></td>
+	<td><a> moc potrzbnego shota</a></td>
+	</tr>
+	<tr>
+	<td><a id="okwynik"></a></td>
+	<td><a> ml. gotowego płynu</a></td>
+	</tr>
+	<tr>
+	<td><a id="po_moc"></td>
+	<td><a> mg. mocy gotowego płynu</a></td>
+	</tr>
+	<tr>
+	<td style="text-align:center" colspan="2" id="dokladne"><a>Dokładne dane to:</a></td>
+	</tr>
+	<tr>
+	<td><a id="obl3"></a></td>
+	<td ><a> ml. potrzebnego shota</a></td>
+	</tr>
+	<tr>
+	<td><a id="moc_shota1"></a></td>
+	<td ><a> mg. mocy shota </a></td>
+	</tr>
+	<tr>
+	<td><a id="wynik"></a></td>
+	<td ><a> ml. gotowego płynu </a></td>
+	</tr>
+	</tbody>
+	</table>	
+</section>
+<footer>
+		<a>©Strona stworzona przez Dawida. K</a>
+</footer>
+	
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+* {padding:0;
+	margin:0;
+font-family: Stencil Std, fantasy;
+color: white;
+
+	}
+
+table{  border: none;
+		font-size:180%;
+		border-spacing: 0mm 0mm;
+		border-radius: 15px;
+		}
+
+td{border: 2mm solid #14004d;
+	background-color:#30156E;
+	border-radius: 15px;
+}
+
+#button{
+		padding: 20px 20px;
+  font-size: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  background-color: #30156E;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #632CDE;
+  width: 100%;
+}
+
+#buttontable{
+	border: 0px;
+	background:none;
+	padding: 3% 1%;	
+}
+
+#button:hover {background-color: #4C22AB}
+
+#button:active {
+  background-color: #632CDE;
+  box-shadow: 0 5px #632CDE;
+  transform: translateY(4px);
+}
+
+
+input{
+	width: 100%;
+	padding: 8%;
+	box-sizing: border-box;
+	resize: vertical;
+	font-size:100%;
+	background-color:#30156E;
+	color: white;
+	border: 1px solid #30156E;
+
+}
+
+
+header {
+		background-color: #14004d;
+		text-align:center;
+		width: 100%;
+		float: right;
+		}
+		
+@keyframes znikanie{
+  0%   {opacity:0%;}
+  5%   {opacity:5%;}
+  10%   {opacity:10%;}
+  15%   {opacity:15%;}
+  20%   {opacity:20%;}
+  25%   {opacity:25%;}
+  30%   {opacity:30%;}
+  35%   {opacity:35%;}
+  40%   {opacity:40%;}
+  45%   {opacity:45%;}
+  50%   {opacity:50%;}
+  55%   {opacity:55%;}
+  60%   {opacity:60%;}
+  65%   {opacity:65%;}
+  70%   {opacity:70%;}
+  75%   {opacity:75%;}
+  80%   {opacity:80%;}
+  85%   {opacity:85%;}
+  90%   {opacity:90%;}
+  95%   {opacity:95%;}
+  100%   {opacity:100%;}
+}
+
+body{
+	  background-color:#000;
+ 
+}
+
+header img{
+			width : 30%;
+		}
+		
+#lewy	{
+	float:left;
+	color:white;
+	width: 50%;
+	background-color:#000000;
+	
+	
+}
+
+#prawy	{
+	float:right;
+	color:white;
+	background-color:#000000;
+	width:50%
+	text-align:right;
+	margin-bottom:5mm;
+	
+	 
+}
+
+#zaokraglone{
+	background-color:#B89F41;
+}
+
+#dokladne{
+	background-color:#B89F41;
+}
+
+footer{ 
+		
+		background-color: #14004d;
+		clear: both;
+		color: white;
+		text-align: right;
+		position:fixed;
+		left: 0;
+		bottom: 0;
+		width:100%;
+		margin-top:5mm;
+		}
+		
+#napis{
+	width:100%;
+	text-align:center;
+	font-size:500%;
+}
+
+@keyframes gradient {
+  0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  100% {color: green;}
+}
+
+@media all and (orientation: landscape) {
+input:active{
+	background-color: #14004d;
+	border: 1px solid #14004d;
+}
+input:hover{
+	background-color: #14004d;
+	border: 1px solid #14004d;
+}	
+#lewy, #prawy, #napis{
+	animation-name: znikanie;
+  animation-duration: 1s;
+}
+
+}
+
+@media all and (orientation: portrait) {
+		
+		#lewy{
+			
+		}
+		#lewy, #prawy{
+			float: left;
+			width:100%;
+		
+		}
+		#button{
+	height:100%;
+}
+		table{	height:40%;
+				width:100%;
+				font-size:300%;
+				padding:2%;
+				}
+		header img{
+			width: 90%; 
+			height:40%;
+		}
+		footer{
+			font-size:150%;
+			text-align:center;
+		}
+		* {padding:0;
+			margin:0;
+			}	
+input{
+	height: 100%;
+}			
+}		
+section {color:white;}
+#bottom{ margin: 200px;}

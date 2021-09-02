@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href="stylepodstron.css" rel="stylesheet" type="text/css">
+	<title>VPT_DK-aromaty</title>
+</head>
+
+<body>
+
+<header>
+		<a href="../index.html"><img id="baner" src="../baner.png" alt="baner"></a>
+</header>
+	<script language="JavaScript">
+		function aromat()
+			{
+			var krople=document.getElementById("pole1").value;
+			if (krople<0){
+			alert("Użyj aromatu ;D");
+			}
+			else
+			var baza=document.getElementById("pole2").value;
+			if (baza<0){
+			alert("Podaj poprawną ilość bazy większą od 0");
+			}
+			else
+			var dzialanie1=0;
+			var dzialanie1=krople*baza;
+			var kropla=0.0325;
+			var wynik1=kropla*dzialanie1;
+			var okolo=Math.round(wynik1);
+			var wynik=Math.round(wynik1 * 100) / 100;
+			
+			 
+			document.getElementById("koniec").innerHTML=wynik;
+			document.getElementById("koniec2").innerHTML=okolo;
+			document.getElementById("koniec3").innerHTML=dzialanie1;
+			}
+	</script>
+<section id="lewy">
+<table>
+<tbody>
+<tr>
+<td><a>Ile kropel aromatu używasz na 1ml płynu?</a></td>
+<td><input type="number" id="pole1" /></br></td>
+</tr>
+<tr>
+<td><a>Ile posiadasz bazy do zmieszania w ml?</a></td>
+<td><input type="number" id="pole2"/></td>
+</tr>
+<tr>
+<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="aromat()"/></td>
+</tr>
+</tbody>
+</table>
+	
+</section>
+<section id="prawy" >
+	<table>
+	<tbody>
+	<tr>
+	<td colspan="2" style="text-align:center" id="zaokraglone"><a>Zaokrąglone dane to:</a></td>
+	</tr>
+	<tr>
+	<td><b id="koniec2"></b></td>
+	<td> <a>ml. aromatu,<a/></br></td>
+	</tr>
+	<tr>
+	<td colspan="2" style="text-align:center" id="dokladne"><a>Dokładne dane to:</a></td>
+	</tr>
+	<tr>
+	<td><b id="koniec"></b></td>
+	<td><a> ml. aromatu</a></td>
+	</tr>
+	<tr id="bottom">
+	<td><b id="koniec3"></b></td>
+	<td><a> liczba kropel</a></td>
+	</tr>
+	</tbody>
+	</table>
+</section>
+<footer>
+	<a>©Strona stworzona przez Dawida. K</a>
+</footer>
+
+</body>
+
+</html>

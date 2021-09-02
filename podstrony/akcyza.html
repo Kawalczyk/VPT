@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href="stylepodstron.css" rel="stylesheet" type="text/css">
+	<title>VPT_akcyza</title>
+</head>
+
+<body>
+
+<header>
+		<a href="../index.html"><img id="baner" src="../baner.png" alt="baner"></a>
+</header>
+	<script language="JavaScript">
+		function akcyza()
+			{
+			var akcyza=0.55;
+			var ml_mie=document.getElementById("pole1").value;
+			if (ml_mie<0){
+			alert("Skoro nie palisz po co liczysz 😅🧐");
+			}
+			else
+			var wydatki=document.getElementById("pole2").value;
+			if (wydatki<0){
+			alert("Palisz za darmo?? 😅🧐");
+			}
+			
+			
+			var koszt_ml_1=wydatki/ml_mie;
+				var koszt_ml=(koszt_ml_1 * 100) / 100;
+			var koszt_ml_po_1=koszt_ml + akcyza;
+				var koszt_ml_po=(koszt_ml_po_1 * 100) / 100;
+			var koszt_mies_po_1=Number(wydatki) + Number(ml_mie * akcyza);
+				var koszt_mies_po=(koszt_mies_po_1 * 100) / 100;
+			var rok=wydatki*12;
+			var rok_po=koszt_mies_po*12;
+			var rok_akcyza=rok_po-rok;
+			var razy=koszt_mies_po/wydatki;
+			
+			
+			
+			document.getElementById("koszt_ml").innerHTML=koszt_ml;
+			document.getElementById("koszt_ml_po").innerHTML=koszt_ml_po;
+			document.getElementById("koszt_mies_po").innerHTML=koszt_mies_po;
+			document.getElementById("wydatki").innerHTML=wydatki;
+			document.getElementById("rok").innerHTML=rok;
+			document.getElementById("rok_po").innerHTML=rok_po;
+			document.getElementById("rok_akcyza").innerHTML=rok_akcyza;
+			document.getElementById("razy").innerHTML=razy;
+			}
+	</script>
+<section id="lewy">
+<table>
+<tbody>
+<tr>
+<td><a>Podaj ile ml płynu używasz miesięcznie:</a></td>
+<td><input type="number" id="pole1" /></td>
+</tr>
+<tr>
+<td><a>Podaj ile wydajesz miesięcznie na płyny do vapowania:</a></td>
+<td><input type="number" id="pole2"/></td>
+</tr>
+<tr>
+<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="akcyza()" /></td>
+</tr>
+</tbody>
+</table>	
+</section>
+<section id="prawy" >
+<table>
+<tbody>
+<td colspan="2" style="text-align:center" id="zaokraglone"><a>Przed akcyzą:</a></td>
+<tr>
+<td><a id="koszt_ml"></a></td>
+<td><a> koszt jednmego ml. przed akcyzą</a></br></td>
+</tr>
+<tr>
+<td><a id="wydatki"></a></td>
+<td><a> wydatki przed akcyzą</a></td>
+</tr>
+<tr>
+<td><a id="rok"></a></td>
+<td><a> roczne wydatki przed akcyzą</a></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center" id="zaokraglone"><a>Po akcyzie:</a></td>
+</tr>
+<tr>
+<td><a id="koszt_ml_po"></a></td>
+<td><a> koszt jednmego ml. po akcyzie</a></td>
+</tr>
+<tr>
+<td><a id="koszt_mies_po"></a></td>
+<td><a> wydatki po akcyzie</a></td>
+</tr>
+<tr>
+<td><a id="rok_po"></a></td>
+<td><a> roczne wydatki po akcyzie</a></td>
+</tr>
+<td><a id="rok_akcyza"></a></td>
+<td><a> tyle wynosi sama stawka akcyzy rocznie</a></td>
+</tr>
+</tr>
+<td><a id="razy"></a></td>
+<td><a> tyle razy więcej będziesz płacił</a></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<footer>
+	<a>©Strona stworzona przez Dawida. K</a>
+</footer>
+
+</body>
+
+</html>

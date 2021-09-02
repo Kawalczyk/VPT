@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="pl" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href="stylepodstron.css" rel="stylesheet" type="text/css">
+	<title>VPT_DK-0mg</title>
+</head>
+
+<body>
+
+<header>
+		<a href="../index.html"><img id="baner" src="../baner.png" alt="baner"></a>
+</header>
+	<script language="JavaScript">
+		function mg()
+			{
+			var il_shota=document.getElementById("pole1").value;
+			if (il_shota<0){
+			alert("Podaj poprawną ilość shota większą od 0");
+			}
+			else
+			var moc_shota=document.getElementById("pole2").value;
+			if (moc_shota<0){
+			alert("Podaj poprawną moc shota większą od 0");
+			}
+			var po_moc=document.getElementById("pole3").value;
+			if (po_moc<0){
+			alert("Podaj poprawną wartość pożądanej mocy większą od 0");
+			}
+			
+			var dzialanie1=0;
+			var dzialanie1=il_shota*moc_shota;
+			var dzialanie2=dzialanie1/po_moc;
+			var wynik=dzialanie2-il_shota;
+			var wynik_okolo=Math.round(wynik);
+			var il_okolo=Math.round(dzialanie2);
+			
+			 
+			document.getElementById("wynik").innerHTML=wynik;
+			document.getElementById("wynik_okolo").innerHTML=wynik_okolo;
+			document.getElementById("il_okolo").innerHTML=il_okolo;
+			document.getElementById("dzialanie2").innerHTML=dzialanie2;
+			document.getElementById("po_moc").innerHTML=po_moc;
+			}
+	</script>
+<section id="lewy">
+<table>
+<tbody>
+<tr>
+<td><a>Podaj ilość shota w ml. :</a></td>
+<td><input type="number" id="pole1" /></td>
+</tr>
+<tr>
+<td><a>Podaj moc shota w mg. :</a></td>
+<td><input type="number" id="pole2"/></td>
+</tr>
+<tr>
+<td><a>Jaką moc chcesz uzyskać? :</a></td>
+<td><input type="number" id="pole3" /></td>
+</tr>
+<tr>
+<td colspan="2" id="buttontable"><input id="button" type="submit" value="Oblicz" onclick="mg()" /></td>
+</tr>
+</tbody>
+</table>
+		
+</section>
+<section id="prawy" >
+<table>
+<tbody>
+<td colspan="2" style="text-align:center" id="zaokraglone"><a>Zaokrąglone dane to:</a></td>
+<tr>
+<td><a id="wynik_okolo"></a></td>
+<td><a> ml. bazy 0mg.</a></br></td>
+</tr>
+<tr>
+<td><a id="il_okolo"></a></td>
+<td><a> ml. gotowego płynu</a></td>
+</tr>
+<tr>
+<td><a id="po_moc"></a></td>
+<td><a> mg. mocy gotowego płynu</a></td>
+</tr>
+<tr>
+<td colspan=2" style="text-align:center" id="dokladne"><a>Dokładne dane to:</a></td>
+</tr>
+<tr>
+<td><a id="wynik"></a></td>
+<td ><a> ml. potrzebnej bazy 0mg.</a></td>
+</tr>
+<tr>
+<td><a id="dzialanie2"></a></td>
+<td ><a> ml. ilość gotowego płynu</a></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<footer>
+	<a>©Strona stworzona przez Dawida. K</a>
+</footer>
+
+</body>
+
+</html>
